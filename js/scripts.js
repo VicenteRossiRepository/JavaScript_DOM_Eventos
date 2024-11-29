@@ -31,3 +31,25 @@ nuevoEnlace.classList.add('navegacion__enlace')
 document.querySelector('.navegacion').appendChild(nuevoEnlace)
 
 console.log(nuevoEnlace)
+
+
+//Eventos
+console.log(1)
+
+window.onload = function (){
+    console.log(3)
+}
+window.addEventListener('load', function (){ //load espera a que el JS y los archivos que dependen del HTML esten listos
+    console.log(2)
+});
+
+document.addEventListener('DOMContentLoaded', function(){ //DOMContentLoaded solo espera que se carge el HTML y nada mas
+    console.log(4)
+})
+
+console.log(5)
+
+
+window.onscroll = function(){
+    console.log('Scroll')
+}
