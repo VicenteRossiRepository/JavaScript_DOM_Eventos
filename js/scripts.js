@@ -17,3 +17,17 @@ enlaces[0].classList.add('nueva-clase')
 
 const heading2 = document.getElementById('heading')
 console.log(heading2)
+
+//Generar enlace en JS
+const nuevoEnlace = document.createElement('A')
+//Agregar el HREF
+nuevoEnlace.href = 'nuevo-enlace.html'
+//Agregar texto
+nuevoEnlace.textContent = 'Nuevo enlace'
+//Agregar clase
+nuevoEnlace.classList.add('navegacion__enlace')
+//Agregar al documento
+
+document.querySelector('.navegacion').appendChild(nuevoEnlace)
+
+console.log(nuevoEnlace)
