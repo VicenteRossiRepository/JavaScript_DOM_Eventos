@@ -91,8 +91,41 @@ formulario.addEventListener('submit',function(e) {
     e.preventDefault(); //Previene el comportamiento por defecto del evento; sirve para validar formularios
     
     // Validar formulario
+    const{nombre,email,mensaje} = datos;
+    if (nombre === '' || email === '' || mensaje === '') {
+        mostraError('Todos los campos son obligatorios')
+        
+        return;
+    }
+        mostrarCorrecto('Formulario enviado')
+    
 
     // Enviar formulario
     console.log('Enviando formulario...');
  
 });
+
+function mostraError(mensaje) {
+    const error = document.createElement('P')
+    error.textContent = mensaje;
+    error.classList.add('error');
+
+    formulario.appendChild(error);
+
+    // Desaparsca despues de 5 segundos
+    setTimeout(() => {
+        error.remove()
+    }, 5000);
+}
+function mostrarCorrecto(mensaje) {
+    const correcto = document.createElement('P')
+    correcto.textContent = mensaje;
+    correcto.classList.add('correcto');
+
+    formulario.appendChild(correcto);
+
+    // Desaparsca despues de 5 segundos
+    setTimeout(() => {
+        correcto.remove()
+    }, 5000);
+}
