@@ -56,12 +56,12 @@ console.log(nuevoEnlace)
 
 
 //Seleccionar elementos y asociar eventos
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click',function(e) {
-    console.log(e);
-    e.preventDefault(); //Previene el comportamiento por defecto del evento; sirve para validar formularios
-    console.log('Botón enviado');
-});
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click',function(e) {
+//     console.log(e);
+//     e.preventDefault(); //Previene el comportamiento por defecto del evento; sirve para validar formularios
+//     console.log('Botón enviado');
+// });
 
 
 
@@ -84,3 +84,15 @@ function leerTexto(e){
     datos[e.target.id] = e.target.value;
     console.log(datos)
 }
+
+// Evento submit
+const formulario = document.querySelector('.formulario');
+formulario.addEventListener('submit',function(e) {
+    e.preventDefault(); //Previene el comportamiento por defecto del evento; sirve para validar formularios
+    
+    // Validar formulario
+
+    // Enviar formulario
+    console.log('Enviando formulario...');
+ 
+});
